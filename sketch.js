@@ -7,7 +7,7 @@ let lives;
 let buttonSubmit;
 
 function setup() {
-	createCanvas(800, 500);
+	createCanvas(1000, 500);
 	
 	input = createInput('');
 	input.size(200, 30);
@@ -20,7 +20,7 @@ function setup() {
 }
 
 function draw() {
-	let myColor = color(200);	
+	let myColor = color(220);	
 	if (word != null && defeat()){
 		deleteKeys();
 		myColor = color(200, 0, 0);
@@ -41,7 +41,7 @@ function draw() {
 		// calc TextSize
 		let ts = 0;
 		let test = true;
-		while(test){
+		while(test && ts < 300){
 			ts++;
 			textSize(ts+5);
 			for (let i = 0; i < word.length; i++){
